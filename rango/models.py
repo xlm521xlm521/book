@@ -17,6 +17,7 @@ class Category(models.Model) :
         return self.name
 class Page(models.Model) :
     category = models.ForeignKey(Category)
+    page_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=128)
     body = models.CharField(max_length=128, default=0)
     answer = models.CharField(max_length=128, default=0)

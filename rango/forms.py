@@ -14,6 +14,7 @@ class CategoryForm( forms. ModelForm) :
 		model = Category
 		fields = ( 'name' , )
 class PageForm( forms.ModelForm) :
+	page_id = forms.IntegerField(help_text="Please enter the id of the page. ")
 	title = forms.CharField( max_length=128, help_text="Please enter the title of the page. ")
 	url = forms.URLField( max_length=200, help_text="Please enter the URL of the page. ")
 	body = forms.CharField(max_length=128,help_text="Please enter the body of the page. ")
