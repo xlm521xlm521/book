@@ -25,7 +25,7 @@
 	<!--带有层次的导航结构 -->
 	<ol class="breadcrumb">
   	<li><a href="/rango/">主页</a></li>
-  	<li><a href="#">{{ category_name }}</a></li>
+  	<li><a href="/rango/category/{{category_name_slug}}/">{{ category_name }}</a></li>
  	<!--<li class="active">{{ page.title }}</li>-->
 	</ol>
 	<!--带有层次的导航结构结束 -->
@@ -50,7 +50,7 @@
 				<a href="#">查看答案</a>
 				{{ page.answer }}</li>
 				{% endfor %}
-				
+			<div id="" ><a href="/rango/category/{{category_name_slug}}/xz/">换一套题</a></div>	
 		</ul>
 
 			{% endif %}

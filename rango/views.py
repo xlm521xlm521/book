@@ -117,7 +117,8 @@ def xz(request, category_name_slug) :
 		category = Category.objects.get( slug=category_name_slug)
 		context_dict['category_name' ] = category.name
 		pages = Page.objects.filter( category=category)
-		context_dict['pages' ] = pages
+		pages_list = pages.order_by( '?' ) [: 5]
+		context_dict['pages' ] = pages_list
 		context_dict['category' ] = category
 		context_dict['category_name_slug' ] =category_name_slug #new
 	except Category.DoesNotExist:
