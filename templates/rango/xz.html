@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %} HELLO {% endblock %}
+{% block myblock %}
+	<!--搜索列表 -->
+	    <nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	  <form class="navbar-form navbar-left" role="search">
+	  <div class="form-group">
+	    <input type="text" class="form-control" placeholder="Search">
+	  </div>
+	  <button type="submit" class="btn btn-default">Search</button>
+	</form>
+	 </div>
+	</nav>
+	<br>
+	<!--搜索列表结束-->
+
+{% endblock %}
+{% block body_block %}
+	<br>
+	<br>
+	<br>
+	<br>
+	<!--带有层次的导航结构 -->
+	<ol class="breadcrumb">
+  	<li><a href="/rango/">主页</a></li>
+  	<li><a href="#">{{ category_name }}</a></li>
+ 	<!--<li class="active">{{ page.title }}</li>-->
+	</ol>
+	<!--带有层次的导航结构结束 -->
+	<br>
+	<h1>{{ category_name }}</h1><br>
+	{% if category %}
+		{% if pages %}
+		<ul>
+			{% for page in pages %}
+			
+				<li>{{ page.title }} {{ page.body }} </li>
+				{% endfor %}
+				<!--单选框 -->
+				<ol type="A" class="xuanxiang">
+				<li>
+				<input type="radio" name="0065a9e9-4c37-48d6-8d64-5cb23cd5453d" value="">
+				错</li>
+				<li>
+				<input type="radio" name="0065a9e9-4c37-48d6-8d64-5cb23cd5453d" value="">
+				对</li>
+				</ol>
+				<!--单选框结束 -->
+				<a href="#">查看答案</a>
+		</ul>
+
+			{% endif %}
+	{% else %}
+		<strong>No pages currently in category. </strong>
+		{% endif %}
+		
+	
+	
+{% endblock %}
