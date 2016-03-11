@@ -15,4 +15,5 @@ urlpatterns = patterns( '',
         url(r'^x001/', views.x001,  name='x001'),
         url(r'^x002/', views.x002,  name='x002'),
         url(r'^x003/', views.x003,  name='x003'),
+        url(r'^xz/', views.xz,  name='xz'),
 )

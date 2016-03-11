@@ -36,8 +36,7 @@
 		<ul>
 			{% for page in pages %}
 			
-				<li>{{ page.title }} {{ page.body }} </li>
-				{% endfor %}
+				<li>{{ forloop.counter }} . {{ page.title }} {{ page.body }} <br>
 				<!--单选框 -->
 				<ol type="A" class="xuanxiang">
 				<li>
@@ -49,6 +48,9 @@
 				</ol>
 				<!--单选框结束 -->
 				<a href="#">查看答案</a>
+				{{ page.answer }}</li>
+				{% endfor %}
+				
 		</ul>
 
 			{% endif %}

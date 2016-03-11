@@ -129,3 +129,5 @@ def x002(request):
 	return render(request, 'rango/x002.html')	
 def x003(request):
 	return render(request, 'rango/x003.html')	
+#def xz(request):
+#	return render(request, 'rango/xz.html')	
